@@ -1,17 +1,22 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Kevin Veliz | Portfolio">
+
+	<h1 class="text-5xl font-bold">
+		Kevin Veliz
+	</h1>
+
+	<section class="py-24">
+		<p class="text-neutral-400 mt-4 text-lg">
+			Full Stack Developer
+		</p>
+
+		<p class="text-neutral-500 mt-6 max-w-xl">
+			I build modern web applications using Angular, Node.js and MySQL.
+			Passionate about clean code, scalable systems and good UI.
+		</p>
+  	</section>
+
+</MainLayout>
