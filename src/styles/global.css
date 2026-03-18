@@ -7,3 +7,21 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+@keyframes blob {
+    0% {
+        border-radius: 42% 58% 63% 37% / 40% 45% 55% 60%;
+    }
+
+    50% {
+        border-radius: 58% 42% 30% 70% / 55% 60% 40% 45%;
+    }
+
+    100% {
+        border-radius: 42% 58% 63% 37% / 40% 45% 55% 60%;
+    }
+}
+
+.blob {
+    animation: blob 6s ease-in-out infinite;
+}
