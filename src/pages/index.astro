@@ -2,26 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
-
+import About from "../components/About.astro";
 ---
 
 <MainLayout title="Kevin Veliz | Portfolio">
 
-	<h1 class="text-5xl font-bold">
-		Kevin Veliz
-	</h1>
-
-	<section class="py-24">
-		<p class="text-neutral-400 mt-4 text-lg">
-			Full Stack Developer
-		</p>
-
-		<p class="text-neutral-500 mt-6 max-w-xl">
-			I build modern web applications using Angular, Node.js and MySQL.
-			Passionate about clean code, scalable systems and good UI.
-		</p>
-  	</section>
-
+	
+	<About /> 
+	
 	<Projects />
 
 	<Contact />

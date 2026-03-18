@@ -2,26 +2,20 @@
 import Card from "./Card.astro";
 ---
 
-<section id="projects" class="mt-24 border border-neutral-800 rounded-xl p-10 bg-neutral-900/40">
+<section
+    id="projects"
+    class="mt-24 border border-neutral-800 rounded-xl p-10 bg-neutral-900/40"
+>
+    <h2 class="text-3xl font-bold">Projects</h2>
 
-    <h2 class="text-3xl font-bold">
-    Projects
-    </h2>
-
-    <p class="text-neutral-400 mt-2">
-    Some things I've built
-    </p>
 
     <div class="grid md:grid-cols-3 gap-6 mt-10">
-
-
         <Card
             title="GGHardware"
             description="Hardware inventory and management system for tracking computer components and stock with full CRUD operations."
             github="https://github.com/KevinVelizz/GGHardware"
             tech={["Express", "MySQL", "EJS", "JavaScript", "HTML", "CSS"]}
         />
-
 
         <Card
             title="Clinica Online"
@@ -36,7 +30,5 @@ import Card from "./Card.astro";
             github="https://github.com/KevinVelizz/Veliz.Kevin.TP2/tree/develop"
             tech={["C#", ".NET", "MySQL"]}
         />
-
     </div>
-
 </section>

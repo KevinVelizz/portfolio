@@ -2,16 +2,14 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<header class="flex justify-between items-center py-4 mx-5">
+<header class="flex justify-between items-center py-4 px-5 border-b border-gray-300/10">
     <div class="flex items-center gap-4">
-        <!-- Logo clickeable -->
         <a href="/" aria-label="Ir al inicio" class="group">
             <div
                 class="relative w-16 h-16 flex items-center justify-center
               bg-gradient-to-r from-blue-400 to-blue-700
               shadow-lg overflow-hidden blob transition-all duration-500"
             >
-                <!-- SVG (logo actual) -->
                 <svg
                     viewBox="0 0 15 15"
                     class="w-7 fill-gray-700 transition-all duration-300 group-hover:opacity-0"
@@ -21,7 +19,6 @@ import Navbar from "./Navbar.astro";
                     ></path>
                 </svg>
 
-                <!-- KV -->
                 <span
                     class="absolute text-white font-bold text-lg opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100"
                 >
@@ -30,7 +27,6 @@ import Navbar from "./Navbar.astro";
             </div>
         </a>
 
-        <!-- Texto -->
         <div class="border-l-2 border-gray-300 pl-4">
             <p
                 class="bg-clip-text text-transparent bg-gradient-to-l from-[#005BC4] to-[#27272A] text-lg font-bold"
@@ -41,4 +37,5 @@ import Navbar from "./Navbar.astro";
     </div>
 
     <Navbar />
+    
 </header>
