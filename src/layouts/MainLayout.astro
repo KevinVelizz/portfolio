@@ -6,23 +6,32 @@ import Footer from "../components/footer.astro";
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
+    <body
+        class="bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-white"
+    >
+        <Header />
 
-<body class="bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-white">
+        <main class="max-w-5xl mx-auto px-6">
+            <slot />
+        </main>
 
-    <Header />
+        <Footer />
 
-    <main class="max-w-5xl mx-auto px-6">
-        <slot />
-    </main>
-
-    <Footer />
-</body>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
 </html>
