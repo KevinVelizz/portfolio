@@ -19,6 +19,18 @@ const { title } = Astro.props;
     >
         <Header />
 
+        <div
+            id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-md z-50 flex flex-col items-center justify-center gap-8 text-xl transform -translate-y-full opacity-0 transition-all duration-700 ease-in-out"
+        >
+            <a href="#about" class="text-white">About</a>
+            <a href="#projects" class="text-white">Projects</a>
+            <a href="#contact" class="text-white">Contact</a>
+
+            <button id="close-menu" class="text-neutral-400 text-4xl mt-10">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
         <main class="max-w-5xl mx-auto px-6">
             <slot />
         </main>
@@ -33,5 +45,34 @@ const { title } = Astro.props;
             nomodule
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
+
+        <script is:inline>
+            window.addEventListener("DOMContentLoaded", () => {
+                const btn = document.getElementById("menu-btn");
+                const menu = document.getElementById("mobile-menu");
+                const close = document.getElementById("close-menu");
+                const links = document.querySelectorAll("#mobile-menu a");
+
+                if (btn && menu && close) {
+                    btn.addEventListener("click", () => {
+                        menu.classList.remove("-translate-y-full", "opacity-0");
+                        menu.classList.add("translate-y-0", "opacity-100");
+                        document.body.style.overflow = "hidden";
+                    });
+
+                    const closeMenu = () => {
+                        menu.classList.add("-translate-y-full", "opacity-0");
+                        menu.classList.remove("translate-y-0", "opacity-100");
+                        document.body.style.overflow = "auto";
+                    };
+
+                    close.addEventListener("click", closeMenu);
+
+                    links.forEach((link) => {
+                        link.addEventListener("click", closeMenu);
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

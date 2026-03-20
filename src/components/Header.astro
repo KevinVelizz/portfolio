@@ -2,7 +2,9 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<header class="flex justify-between items-center py-4 px-5 border-b border-gray-300/10">
+<header
+    class="flex justify-between items-center py-4 px-5 border-b border-gray-300/10 relative"
+>
     <div class="flex items-center gap-4">
         <a href="/" aria-label="Ir al inicio" class="group">
             <div
@@ -36,6 +38,11 @@ import Navbar from "./Navbar.astro";
         </div>
     </div>
 
-    <Navbar />
-    
+    <!-- DESKTOP NAV -->
+    <div class="hidden md:block">
+        <Navbar />
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="menu-btn" class="md:hidden"><ion-icon class="text-white text-4xl" name="menu-outline"></ion-icon></button>
 </header>
